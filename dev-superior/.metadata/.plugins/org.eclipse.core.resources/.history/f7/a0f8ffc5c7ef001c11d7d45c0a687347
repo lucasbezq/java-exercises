@@ -1,0 +1,26 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter the number of tax payers: ");
+		int taxPayers = sc.nextInt();
+
+		for (int i = 1; i <= taxPayers; i++) {
+			System.out.println();
+			System.out.println("Tax payer #" + i + ":");
+			System.out.print("Individual or Company (i/c): ");
+			char question = sc.next().charAt(0);
+			System.out.print("Anual income: ");
+			double annualIncome = sc.nextDouble();
+		}
+	}
+
+}

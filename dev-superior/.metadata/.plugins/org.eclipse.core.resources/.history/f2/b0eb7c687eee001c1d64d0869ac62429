@@ -1,0 +1,17 @@
+package application;
+
+import entities.Account;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Account acc = new Account(1001, "Lucas", 1000.0);
+		acc.withdraw(200.0);
+		
+		System.out.println(acc.getBalance());
+		
+
+	}
+
+}

@@ -1,0 +1,38 @@
+package entities;
+
+public class Individual extends TaxPayer {
+
+	private static double MINIMUM_TAX = 0.15;
+	private static double MAXIMUM_TAX = 0.25;
+	
+	private Double healthSpeding;
+
+	public Individual() {
+		super();
+	}
+
+	public Individual(String name, Double annualIncome, Double healthSpeding) {
+		super(name, annualIncome);
+		this.healthSpeding = healthSpeding;
+	}
+
+	public Double getHealthSpeding() {
+		return healthSpeding;
+	}
+
+	public void setHealthSpeding(Double healthSpeding) {
+		this.healthSpeding = healthSpeding;
+	}
+
+	@Override
+	public Double tax() {
+		if (annualIncome < 20000.0) {
+			annualIncome += annualIncome * MINIMUM_TAX;
+		}
+		else (annualIncome >= 20000.0) {
+			annualIncome += annualIncome * MAXIMUM_TAX;
+		}
+		
+	}
+
+}
