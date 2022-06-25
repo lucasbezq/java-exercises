@@ -1,9 +1,0 @@
-package entities;
-
-public class Comments {
-	
-	private String text;
-	
-	public Comment
-	
-}
